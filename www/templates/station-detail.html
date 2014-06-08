@@ -1,0 +1,14 @@
+<ion-view title="{{station.name}}">
+
+  <ion-nav-buttons side="right">
+  	<button class="button button-clear icon icon ion-star" ng-click="favorite(station.abbr)"></button>
+  </ion-nav-buttons>
+
+  <ion-content has-header="true" padding="true">
+	<ion-list>
+      <ion-item ng-repeat="dep in departures" type="item-text-wrap" ng-click="showDetails({{dep}})">
+        <strong>{{dep.dest}}</strong>&mdash;{{dep.times}}  <div style="float:right">{{dep.cars}}</div>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

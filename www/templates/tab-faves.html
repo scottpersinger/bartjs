@@ -1,0 +1,17 @@
+<ion-view title="Favorites">
+
+  <ion-nav-buttons side="right">
+  	<button class="button button-clear" ng-click="toggleEdit()">Edit</button>
+  </ion-nav-buttons>
+
+  <ion-content class="has-header">
+    <ion-list show-delete="showDelete">
+      <ion-item class="item-icon-right" ng-repeat="station in favorites" type="item-text-wrap" href="#/tab/station/{{station.abbr}}">
+        {{station.name}}
+		<ion-delete-button class="ion-minus-circled"
+                       ng-click="unfavorite(station.abbr)">
+    	</ion-delete-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

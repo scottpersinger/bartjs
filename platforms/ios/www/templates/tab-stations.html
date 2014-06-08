@@ -1,0 +1,15 @@
+<ion-view title="Stations">
+  <ion-content class="has-header padding">
+    <div class="list list-inset">
+      <label class="item item-input">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="text" placeholder="Search" ng-model="query">
+      </label>
+    </div>
+	  <ion-list>
+      <ion-item ng-repeat="station in stations | filter:query" type="item-text-wrap" href="#/tab/station/{{station.abbr}}">
+        {{station.name}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
