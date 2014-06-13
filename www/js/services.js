@@ -77,4 +77,9 @@ angular.module('starter.services', [])
     }  
   }
 })
-;
+
+.factory('Survey', function() {
+  return function() {
+  }
+})
+

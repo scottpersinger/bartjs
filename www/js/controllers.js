@@ -49,5 +49,9 @@ angular.module('starter.controllers', ['ionic'])
   $scope.friend = Friends.get($stateParams.friendId);
 })
 
-.controller('AccountCtrl', function($scope) {
+.controller('AccountCtrl', function($scope, $state, Survey) {
+  $scope.start = function() {
+    Survey();
+    $state.go('tab.account-q1');
+  }
 });

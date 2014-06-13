@@ -27,6 +27,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   // Learn more here: https://github.com/angular-ui/ui-router
   // Set up the various states which the app can be in.
   // Each state's controller can be found in controllers.js
+  //$rootScope.stateProvider = $stateProvider;
+
   $stateProvider
 
     // setup an abstract state for the tabs directive
@@ -72,6 +74,26 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       views: {
         'tab-account': {
           templateUrl: 'templates/tab-account.html',
+          controller: 'AccountCtrl'
+        }
+      }
+    })
+
+    .state('tab.account-q1', {
+      url: '/account/q1',
+      views: {
+        'tab-account': {
+          templateUrl: 'templates/tab-account-q1.html',
+          controller: 'AccountCtrl'
+        }
+      }
+    })
+
+    .state('tab.account-q2', {
+      url: '/account/q2',
+      views: {
+        'tab-account': {
+          templateUrl: 'templates/tab-account-q2.html',
           controller: 'AccountCtrl'
         }
       }
